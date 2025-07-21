@@ -31,7 +31,7 @@ Follow the steps below to set up the project locally.
 
 ### 1. Clone the repository
 
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/22man67hh/office-care.git
 cd your-repo
 
 2. Configure environment
