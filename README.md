@@ -1,7 +1,7 @@
 
 <h2>  📝 Task Management System</h2>
 
-A modern **Task Management Web App** with a **draggable Kanban-style UI**, built using **Laravel**, **Blade**, **TailwindCSS**, and **MySQL**. It includes robust **role and permission management** via **Spatie** and uses **Laravel Breeze** for authentication. Ideal for managing users, tasks, and workflows in a structured and restricted environment.
+A modern **Task Management Web App** with a **draggable Trello-style UI**, built using **Laravel**, **Blade**, **TailwindCSS**, and **MySQL**. It includes robust **role and permission management** via **Spatie** and uses **Laravel Breeze** for authentication. Ideal for managing users, tasks, and workflows in a structured and restricted environment.
 
 ---
 
