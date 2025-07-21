@@ -1,61 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h2>  📝 Task Management System</h2>
 
-## About Laravel
+A modern **Task Management Web App** with a **draggable Kanban-style UI**, built using **Laravel**, **Blade**, **TailwindCSS**, and **MySQL**. It includes robust **role and permission management** via **Spatie** and uses **Laravel Breeze** for authentication. Ideal for managing users, tasks, and workflows in a structured and restricted environment.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- ✅ Drag-and-drop task movement (Kanban-style)
+- 🎨 Styled with TailwindCSS
+- 🔐 Role-based access using Spatie Permission
+- 👑 Admin panel to manage permissions and roles
+- 👤 Users restricted to assigned permissions
+- 📂 Task filtering by user, type, and date
+- 🧠 Seeder creates an admin with full access
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🧱 Tech Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Frontend             | Backend   | Auth System      | Roles & Permissions   | Database |
+|----------------------|-----------|------------------|------------------------|----------|
+| Blade + TailwindCSS  | Laravel   | Laravel Breeze   | Spatie Laravel Package | MySQL    |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 📦 Installation Guide
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Follow the steps below to set up the project locally.
 
-### Premium Partners
+### 1. Clone the repository
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 
-## Contributing
+2. Configure environment
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Copy the .env file:
 
-## Code of Conduct
+cp .env.example .env
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Update your .env file to match your local database settings:
 
-## Security Vulnerabilities
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=m@nish123 # You can remove this if you have no password
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. Install PHP dependencies
 
-## License
+composer install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4. Run migrations and seeders
+
+php artisan migrate
+php artisan db:seed
+
+    🔑 Seeder will create a default admin user with full access.
+
+5. Install and build frontend assets
+
+npm install
+npm run dev
+
+    TailwindCSS (via Laravel Breeze) requires npm run dev to compile properly.
+
+6. Run the application
+
+php artisan serve
+
+Visit http://localhost:8000 in your browser.
+🔐 Roles & Permissions
+
+    Admin
+
+        Created by default via seeder
+
+        Has access to all routes and actions
+
+        Can create permissions from dropdowns
+
+        Can assign permissions to roles
+
+    User
+
+        Default role for new registrations
+
+        Access limited to what's granted by assigned permissions
+
+    Admin must first create permissions and assign them to roles. Users will only be able to access features based on those permissions.
+
+🔎 Task Management
+
+    Drag tasks between statuses using drag-and-drop UI
+
+    Filter tasks by:
+
+        Assigned User
+
+        Task Type
+
+        Date
+
+    Tasks are permission-controlled
+
+🛠 Admin First Steps
+
+    Login as Admin (from seeded user)
+
+    Create new Permissions
+
+    Assign permissions to Roles
+
+    Only after that, users will be able to access features based on roles
+
+🗂 Example Admin Seeder (Credentials)
+
+    You can customize this in DatabaseSeeder.php or wherever your admin is seeded.
+<h3>Credentials</h3>
+<strong>username:test@example.com</strong>
+<strong>password:password</strong>
+
