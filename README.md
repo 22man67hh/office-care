@@ -34,7 +34,7 @@ Follow the steps below to set up the project locally.
 git clone https://github.com/22man67hh/office-care.git
 cd your-repo
 
-2. Configure environment
+### 2. Configure environment
 
 Copy the .env file:
 
@@ -46,27 +46,27 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=m@nish123 # You can remove this if you have no password
 
-3. Install PHP dependencies
+### 3. Install PHP dependencies
 
-composer install
+    composer install
 
-4. Run migrations and seeders
+### 4. Run migrations and seeders
 
-php artisan migrate
-php artisan db:seed
+    php artisan migrate
+    php artisan db:seed
 
     🔑 Seeder will create a default admin user with full access.
 
-5. Install and build frontend assets
+### 5. Install and build frontend assets
 
-npm install
-npm run dev
+    npm install
+    npm run dev
 
     TailwindCSS (via Laravel Breeze) requires npm run dev to compile properly.
 
-6. Run the application
+### 6. Run the application
 
-php artisan serve
+     php artisan serve
 
 Visit http://localhost:8000 in your browser.
 🔐 Roles & Permissions
@@ -91,16 +91,11 @@ Visit http://localhost:8000 in your browser.
 
 🔎 Task Management
 
-    Drag tasks between statuses using drag-and-drop UI
-
+ Drag tasks between statuses using drag-and-drop UI
     Filter tasks by:
-
-        Assigned User
-
-        Task Type
-
-        Date
-
+     Assigned User
+     Task Type
+       Date
     Tasks are permission-controlled
 
 🛠 Admin First Steps
