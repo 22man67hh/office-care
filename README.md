@@ -7,7 +7,7 @@ A modern **Task Management Web App** with a **draggable Trello-style UI**, built
 
 ## 🚀 Features
 
-- ✅ Drag-and-drop task movement (Kanban-style)
+- ✅ Drag-and-drop task movement (Trello-style)
 - 🎨 Styled with TailwindCSS
 - 🔐 Role-based access using Spatie Permission
 - 👑 Admin panel to manage permissions and roles
